@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04_변수</title>
+</head>
+<body>
+    <h1>console로보기</h1>
+    <script>
+
+        /* 4.1 변수란 */
+
+        // 변수에 값을 저장 -> 할당 , 변수 값을 읽어들이는것 -> 참조
+        // 10+20 이 만들어낸 30이란 값이 들어있는 메모리주소를 result라는 변수이름이 언제든지 참조할수있게됨
+        var result = 10+20; 
+        console.log(result);
+
+        // 변수는 하나의 값을 저장하기 위한 수단이다.
+        var userId= 1;
+        var userName = 'Lee';
+
+        // 객체나 배열 같은 자료구조를 사용하면 여러 개의 값을 하나로 그룹화해서 하나의 값처럼 사용할 수 있다.
+        var user = { id:1, name:'Lee'};
+        var users = [
+            {id:1, name:'Lee'},
+            {id:2, name:'Kim'}
+        ];
+        console.log(user.name)
+
+        /* 변수선언 */
+
+        // 변수만 선언
+        // 하나의 메모리공간을 확보 undifinde라는 자바스크립트의 원시값이 암묵적으로 할당=> 초기화
+        var demo; // ~ ES5
+        console.log(demo);  // undefined
+
+        let a; //  ~ ES6
+        console.log(a);   // undefined
+        const b= 10; // ~ ES6 const는 반드시 값을 할당해야함
+        console.log(b); // 10
+
+        /* 4.4 변수선언의 실행 시점과 변수 호이스팅 */
+
+        console.log(score); // undefined
+        var score;  // 변수 선언 : 선언문만 런타임 전에실행
+        score = 80; // 값의 할당 : 할당문은 먼저 실행안됨
+        console.log(score); // 80
+
+        console.log(score1); // undefined
+        var score1 = 100; // 변수 선언과 값의 할당(하나의 문)
+        console.log(score1); // 100
+
+        /* 4.5 값의 할당 */
+
+        console.log(num);
+
+        num = 10;
+        var num;
+
+        console.log(num);
+
+    </script>
+</body>
+</html>
